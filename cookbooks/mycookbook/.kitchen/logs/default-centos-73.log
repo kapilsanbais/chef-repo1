@@ -1,0 +1,270 @@
+I, [2017-07-23T15:38:19.871134 #4458]  INFO -- default-centos-73: -----> Creating <default-centos-73>...
+I, [2017-07-23T15:38:19.916887 #4458]  INFO -- default-centos-73: Sending build context to Docker daemon 146.4 kB
+I, [2017-07-23T15:38:19.964209 #4458]  INFO -- default-centos-73: Step 1 : FROM centos:centos7
+I, [2017-07-23T15:38:19.978628 #4458]  INFO -- default-centos-73: Trying to pull repository docker.io/library/centos ... 
+I, [2017-07-23T15:38:53.137812 #4458]  INFO -- default-centos-73: centos7: Pulling from docker.io/library/centos
+I, [2017-07-23T15:38:53.137898 #4458]  INFO -- default-centos-73: 7b6bb4652a1b: Pulling fs layer
+I, [2017-07-23T15:39:27.575850 #4458]  INFO -- default-centos-73: 7b6bb4652a1b: Verifying Checksum
+I, [2017-07-23T15:39:27.575917 #4458]  INFO -- default-centos-73: 7b6bb4652a1b: Download complete
+I, [2017-07-23T15:39:37.977400 #4458]  INFO -- default-centos-73: 7b6bb4652a1b: Pull complete
+I, [2017-07-23T15:39:37.989895 #4458]  INFO -- default-centos-73: Digest: sha256:c1010e2fe2b635822d99a096b1f4184becf5d1c98707cbccae00be663a9b9131
+I, [2017-07-23T15:39:37.993520 #4458]  INFO -- default-centos-73:  ---> 36540f359ca3
+I, [2017-07-23T15:39:37.993597 #4458]  INFO -- default-centos-73: Step 2 : ENV container docker
+I, [2017-07-23T15:39:38.120301 #4458]  INFO -- default-centos-73:  ---> Running in 2946eab86e04
+I, [2017-07-23T15:39:39.070061 #4458]  INFO -- default-centos-73:  ---> 10dbddeb7a44
+I, [2017-07-23T15:39:39.197798 #4458]  INFO -- default-centos-73: Removing intermediate container 2946eab86e04
+I, [2017-07-23T15:39:39.199824 #4458]  INFO -- default-centos-73: Step 3 : RUN yum clean all
+I, [2017-07-23T15:39:39.319146 #4458]  INFO -- default-centos-73:  ---> Running in b6287bc0090d
+I, [2017-07-23T15:39:39.715798 #4458]  INFO -- default-centos-73: Loaded plugins: fastestmirror, ovl
+I, [2017-07-23T15:39:39.750510 #4458]  INFO -- default-centos-73: Cleaning repos: base extras updates
+I, [2017-07-23T15:39:39.750585 #4458]  INFO -- default-centos-73: Cleaning up everything
+I, [2017-07-23T15:39:40.634691 #4458]  INFO -- default-centos-73:  ---> e34a5c49215a
+I, [2017-07-23T15:39:40.771425 #4458]  INFO -- default-centos-73: Removing intermediate container b6287bc0090d
+I, [2017-07-23T15:39:40.771522 #4458]  INFO -- default-centos-73: Step 4 : RUN yum install -y sudo openssh-server openssh-clients which curl
+I, [2017-07-23T15:39:40.885839 #4458]  INFO -- default-centos-73:  ---> Running in cd3262228fd7
+I, [2017-07-23T15:39:41.255377 #4458]  INFO -- default-centos-73: Loaded plugins: fastestmirror, ovl
+I, [2017-07-23T15:40:40.428527 #4458]  INFO -- default-centos-73: Determining fastest mirrors
+I, [2017-07-23T15:40:43.633221 #4458]  INFO -- default-centos-73:  * base: centos.excellmedia.net
+I, [2017-07-23T15:40:43.634311 #4458]  INFO -- default-centos-73:  * extras: centos.excellmedia.net
+I, [2017-07-23T15:40:43.634370 #4458]  INFO -- default-centos-73:  * updates: centos.excellmedia.net
+I, [2017-07-23T15:40:47.209753 #4458]  INFO -- default-centos-73: Package curl-7.29.0-35.el7.centos.x86_64 already installed and latest version
+I, [2017-07-23T15:40:47.209818 #4458]  INFO -- default-centos-73: Resolving Dependencies
+I, [2017-07-23T15:40:47.209841 #4458]  INFO -- default-centos-73: --> Running transaction check
+I, [2017-07-23T15:40:47.209942 #4458]  INFO -- default-centos-73: ---> Package openssh-clients.x86_64 0:6.6.1p1-35.el7_3 will be installed
+I, [2017-07-23T15:40:47.239533 #4458]  INFO -- default-centos-73: --> Processing Dependency: openssh = 6.6.1p1-35.el7_3 for package: openssh-clients-6.6.1p1-35.el7_3.x86_64
+I, [2017-07-23T15:40:47.403361 #4458]  INFO -- default-centos-73: --> Processing Dependency: fipscheck-lib(x86-64) >= 1.3.0 for package: openssh-clients-6.6.1p1-35.el7_3.x86_64
+I, [2017-07-23T15:40:47.403444 #4458]  INFO -- default-centos-73: --> Processing Dependency: libfipscheck.so.1()(64bit) for package: openssh-clients-6.6.1p1-35.el7_3.x86_64
+I, [2017-07-23T15:40:47.403499 #4458]  INFO -- default-centos-73: --> Processing Dependency: libedit.so.0()(64bit) for package: openssh-clients-6.6.1p1-35.el7_3.x86_64
+I, [2017-07-23T15:40:47.403615 #4458]  INFO -- default-centos-73: ---> Package openssh-server.x86_64 0:6.6.1p1-35.el7_3 will be installed
+I, [2017-07-23T15:40:47.431798 #4458]  INFO -- default-centos-73: --> Processing Dependency: libwrap.so.0()(64bit) for package: openssh-server-6.6.1p1-35.el7_3.x86_64
+I, [2017-07-23T15:40:47.431892 #4458]  INFO -- default-centos-73: ---> Package sudo.x86_64 0:1.8.6p7-23.el7_3 will be installed
+I, [2017-07-23T15:40:47.431931 #4458]  INFO -- default-centos-73: ---> Package which.x86_64 0:2.20-7.el7 will be installed
+I, [2017-07-23T15:40:47.431957 #4458]  INFO -- default-centos-73: --> Running transaction check
+I, [2017-07-23T15:40:47.431977 #4458]  INFO -- default-centos-73: ---> Package fipscheck-lib.x86_64 0:1.4.1-5.el7 will be installed
+I, [2017-07-23T15:40:47.461657 #4458]  INFO -- default-centos-73: --> Processing Dependency: /usr/bin/fipscheck for package: fipscheck-lib-1.4.1-5.el7.x86_64
+I, [2017-07-23T15:40:47.461736 #4458]  INFO -- default-centos-73: ---> Package libedit.x86_64 0:3.0-12.20121213cvs.el7 will be installed
+I, [2017-07-23T15:40:47.461764 #4458]  INFO -- default-centos-73: ---> Package openssh.x86_64 0:6.6.1p1-35.el7_3 will be installed
+I, [2017-07-23T15:40:47.461786 #4458]  INFO -- default-centos-73: ---> Package tcp_wrappers-libs.x86_64 0:7.6-77.el7 will be installed
+I, [2017-07-23T15:40:47.461804 #4458]  INFO -- default-centos-73: --> Running transaction check
+I, [2017-07-23T15:40:47.461876 #4458]  INFO -- default-centos-73: ---> Package fipscheck.x86_64 0:1.4.1-5.el7 will be installed
+I, [2017-07-23T15:40:47.551624 #4458]  INFO -- default-centos-73: --> Finished Dependency Resolution
+I, [2017-07-23T15:40:47.575660 #4458]  INFO -- default-centos-73: 
+I, [2017-07-23T15:40:47.575724 #4458]  INFO -- default-centos-73: Dependencies Resolved
+I, [2017-07-23T15:40:47.575746 #4458]  INFO -- default-centos-73: 
+I, [2017-07-23T15:40:47.575771 #4458]  INFO -- default-centos-73: ================================================================================
+I, [2017-07-23T15:40:47.575795 #4458]  INFO -- default-centos-73:  Package               Arch       Version                     Repository   Size
+I, [2017-07-23T15:40:47.575814 #4458]  INFO -- default-centos-73: ================================================================================
+I, [2017-07-23T15:40:47.575832 #4458]  INFO -- default-centos-73: Installing:
+I, [2017-07-23T15:40:47.575853 #4458]  INFO -- default-centos-73:  openssh-clients       x86_64     6.6.1p1-35.el7_3            updates     642 k
+I, [2017-07-23T15:40:47.575871 #4458]  INFO -- default-centos-73:  openssh-server        x86_64     6.6.1p1-35.el7_3            updates     440 k
+I, [2017-07-23T15:40:47.575888 #4458]  INFO -- default-centos-73:  sudo                  x86_64     1.8.6p7-23.el7_3            updates     735 k
+I, [2017-07-23T15:40:47.575905 #4458]  INFO -- default-centos-73:  which                 x86_64     2.20-7.el7                  base         41 k
+I, [2017-07-23T15:40:47.575923 #4458]  INFO -- default-centos-73: Installing for dependencies:
+I, [2017-07-23T15:40:47.575940 #4458]  INFO -- default-centos-73:  fipscheck             x86_64     1.4.1-5.el7                 base         21 k
+I, [2017-07-23T15:40:47.577088 #4458]  INFO -- default-centos-73:  fipscheck-lib         x86_64     1.4.1-5.el7                 base         11 k
+I, [2017-07-23T15:40:47.577141 #4458]  INFO -- default-centos-73:  libedit               x86_64     3.0-12.20121213cvs.el7      base         92 k
+I, [2017-07-23T15:40:47.577161 #4458]  INFO -- default-centos-73:  openssh               x86_64     6.6.1p1-35.el7_3            updates     438 k
+I, [2017-07-23T15:40:47.577179 #4458]  INFO -- default-centos-73:  tcp_wrappers-libs     x86_64     7.6-77.el7                  base         66 k
+I, [2017-07-23T15:40:47.577197 #4458]  INFO -- default-centos-73: 
+I, [2017-07-23T15:40:47.577213 #4458]  INFO -- default-centos-73: Transaction Summary
+I, [2017-07-23T15:40:47.577231 #4458]  INFO -- default-centos-73: ================================================================================
+I, [2017-07-23T15:40:47.577260 #4458]  INFO -- default-centos-73: Install  4 Packages (+5 Dependent packages)
+I, [2017-07-23T15:40:47.577278 #4458]  INFO -- default-centos-73: 
+I, [2017-07-23T15:40:47.577294 #4458]  INFO -- default-centos-73: Total download size: 2.4 M
+I, [2017-07-23T15:40:47.577309 #4458]  INFO -- default-centos-73: Installed size: 7.4 M
+I, [2017-07-23T15:40:47.577324 #4458]  INFO -- default-centos-73: Downloading packages:
+I, [2017-07-23T15:41:03.331078 #4458]  INFO -- default-centos-73: [91mwarning: /var/cache/yum/x86_64/7/base/packages/fipscheck-1.4.1-5.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+I, [2017-07-23T15:41:03.331182 #4458]  INFO -- default-centos-73: [0mPublic key for fipscheck-1.4.1-5.el7.x86_64.rpm is not installed
+I, [2017-07-23T15:41:19.520704 #4458]  INFO -- default-centos-73: Public key for openssh-6.6.1p1-35.el7_3.x86_64.rpm is not installed
+I, [2017-07-23T15:41:35.755389 #4458]  INFO -- default-centos-73: --------------------------------------------------------------------------------
+I, [2017-07-23T15:41:35.755499 #4458]  INFO -- default-centos-73: Total                                               52 kB/s | 2.4 MB  00:48     
+I, [2017-07-23T15:41:35.755533 #4458]  INFO -- default-centos-73: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+I, [2017-07-23T15:41:35.759337 #4458]  INFO -- default-centos-73: [91mImporting GPG key 0xF4A80EB5:
+I, [2017-07-23T15:41:35.759396 #4458]  INFO -- default-centos-73:  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+I, [2017-07-23T15:41:35.759422 #4458]  INFO -- default-centos-73:  Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+I, [2017-07-23T15:41:35.759442 #4458]  INFO -- default-centos-73:  Package    : centos-release-7-3.1611.el7.centos.x86_64 (@CentOS)
+I, [2017-07-23T15:41:35.759470 #4458]  INFO -- default-centos-73:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+I, [2017-07-23T15:41:35.813101 #4458]  INFO -- default-centos-73: [0mRunning transaction check
+I, [2017-07-23T15:41:35.826996 #4458]  INFO -- default-centos-73: Running transaction test
+I, [2017-07-23T15:41:35.843996 #4458]  INFO -- default-centos-73: Transaction test succeeded
+I, [2017-07-23T15:41:35.844058 #4458]  INFO -- default-centos-73: Running transaction
+I, [2017-07-23T15:41:35.914164 #4458]  INFO -- default-centos-73:   Installing : fipscheck-1.4.1-5.el7.x86_64                                 1/9 
+I, [2017-07-23T15:41:37.129684 #4458]  INFO -- default-centos-73:   Installing : fipscheck-lib-1.4.1-5.el7.x86_64                             2/9 
+I, [2017-07-23T15:41:37.154450 #4458]  INFO -- default-centos-73:   Installing : openssh-6.6.1p1-35.el7_3.x86_64                              3/9 
+I, [2017-07-23T15:41:37.733556 #4458]  INFO -- default-centos-73:   Installing : tcp_wrappers-libs-7.6-77.el7.x86_64                          4/9 
+I, [2017-07-23T15:41:38.396002 #4458]  INFO -- default-centos-73:   Installing : libedit-3.0-12.20121213cvs.el7.x86_64                        5/9 
+I, [2017-07-23T15:41:39.103877 #4458]  INFO -- default-centos-73:   Installing : openssh-clients-6.6.1p1-35.el7_3.x86_64                      6/9 
+I, [2017-07-23T15:41:39.804456 #4458]  INFO -- default-centos-73:   Installing : openssh-server-6.6.1p1-35.el7_3.x86_64                       7/9 
+I, [2017-07-23T15:41:40.401456 #4458]  INFO -- default-centos-73:   Installing : sudo-1.8.6p7-23.el7_3.x86_64                                 8/9 
+I, [2017-07-23T15:41:40.966357 #4458]  INFO -- default-centos-73:   Installing : which-2.20-7.el7.x86_64                                      9/9 
+I, [2017-07-23T15:41:40.966434 #4458]  INFO -- default-centos-73: install-info: No such file or directory for /usr/share/info/which.info.gz
+I, [2017-07-23T15:41:41.046767 #4458]  INFO -- default-centos-73:   Verifying  : openssh-6.6.1p1-35.el7_3.x86_64                              1/9 
+I, [2017-07-23T15:41:41.065794 #4458]  INFO -- default-centos-73:   Verifying  : libedit-3.0-12.20121213cvs.el7.x86_64                        2/9 
+I, [2017-07-23T15:41:41.095385 #4458]  INFO -- default-centos-73:   Verifying  : openssh-clients-6.6.1p1-35.el7_3.x86_64                      3/9 
+I, [2017-07-23T15:41:41.118851 #4458]  INFO -- default-centos-73:   Verifying  : which-2.20-7.el7.x86_64                                      4/9 
+I, [2017-07-23T15:41:41.141169 #4458]  INFO -- default-centos-73:   Verifying  : openssh-server-6.6.1p1-35.el7_3.x86_64                       5/9 
+I, [2017-07-23T15:41:41.163684 #4458]  INFO -- default-centos-73:   Verifying  : sudo-1.8.6p7-23.el7_3.x86_64                                 6/9 
+I, [2017-07-23T15:41:41.193966 #4458]  INFO -- default-centos-73:   Verifying  : tcp_wrappers-libs-7.6-77.el7.x86_64                          7/9 
+I, [2017-07-23T15:41:41.218281 #4458]  INFO -- default-centos-73:   Verifying  : fipscheck-lib-1.4.1-5.el7.x86_64                             8/9 
+I, [2017-07-23T15:41:41.305917 #4458]  INFO -- default-centos-73:   Verifying  : fipscheck-1.4.1-5.el7.x86_64                                 9/9 
+I, [2017-07-23T15:41:41.306975 #4458]  INFO -- default-centos-73: 
+I, [2017-07-23T15:41:41.307183 #4458]  INFO -- default-centos-73: Installed:
+I, [2017-07-23T15:41:41.307296 #4458]  INFO -- default-centos-73:   openssh-clients.x86_64 0:6.6.1p1-35.el7_3                                     
+I, [2017-07-23T15:41:41.307351 #4458]  INFO -- default-centos-73:   openssh-server.x86_64 0:6.6.1p1-35.el7_3                                      
+I, [2017-07-23T15:41:41.307395 #4458]  INFO -- default-centos-73:   sudo.x86_64 0:1.8.6p7-23.el7_3                                                
+I, [2017-07-23T15:41:41.307434 #4458]  INFO -- default-centos-73:   which.x86_64 0:2.20-7.el7                                                     
+I, [2017-07-23T15:41:41.307537 #4458]  INFO -- default-centos-73: 
+I, [2017-07-23T15:41:41.307621 #4458]  INFO -- default-centos-73: Dependency Installed:
+I, [2017-07-23T15:41:41.307668 #4458]  INFO -- default-centos-73:   fipscheck.x86_64 0:1.4.1-5.el7            fipscheck-lib.x86_64 0:1.4.1-5.el7  
+I, [2017-07-23T15:41:41.307702 #4458]  INFO -- default-centos-73:   libedit.x86_64 0:3.0-12.20121213cvs.el7   openssh.x86_64 0:6.6.1p1-35.el7_3   
+I, [2017-07-23T15:41:41.307735 #4458]  INFO -- default-centos-73:   tcp_wrappers-libs.x86_64 0:7.6-77.el7    
+I, [2017-07-23T15:41:41.307802 #4458]  INFO -- default-centos-73: 
+I, [2017-07-23T15:41:41.307865 #4458]  INFO -- default-centos-73: Complete!
+I, [2017-07-23T15:41:44.369861 #4458]  INFO -- default-centos-73:  ---> b6e1aa2d507c
+I, [2017-07-23T15:41:44.523013 #4458]  INFO -- default-centos-73: Removing intermediate container cd3262228fd7
+I, [2017-07-23T15:41:44.523218 #4458]  INFO -- default-centos-73: Step 5 : RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
+I, [2017-07-23T15:41:44.632801 #4458]  INFO -- default-centos-73:  ---> Running in 123020a4ba4c
+I, [2017-07-23T15:41:45.062708 #4458]  INFO -- default-centos-73: Generating public/private rsa key pair.
+I, [2017-07-23T15:41:45.062794 #4458]  INFO -- default-centos-73: Your identification has been saved in /etc/ssh/ssh_host_rsa_key.
+I, [2017-07-23T15:41:45.062825 #4458]  INFO -- default-centos-73: Your public key has been saved in /etc/ssh/ssh_host_rsa_key.pub.
+I, [2017-07-23T15:41:45.062850 #4458]  INFO -- default-centos-73: The key fingerprint is:
+I, [2017-07-23T15:41:45.062869 #4458]  INFO -- default-centos-73: d3:a6:26:9c:03:1e:8f:e5:2a:ba:01:3f:33:ee:de:f2 root@d1e7c521d3a4
+I, [2017-07-23T15:41:45.062895 #4458]  INFO -- default-centos-73: The key's randomart image is:
+I, [2017-07-23T15:41:45.062915 #4458]  INFO -- default-centos-73: +--[ RSA 2048]----+
+I, [2017-07-23T15:41:45.062934 #4458]  INFO -- default-centos-73: |                 |
+I, [2017-07-23T15:41:45.062950 #4458]  INFO -- default-centos-73: |                 |
+I, [2017-07-23T15:41:45.062965 #4458]  INFO -- default-centos-73: |                 |
+I, [2017-07-23T15:41:45.062980 #4458]  INFO -- default-centos-73: |         .       |
+I, [2017-07-23T15:41:45.062994 #4458]  INFO -- default-centos-73: |.   o . S o      |
+I, [2017-07-23T15:41:45.063020 #4458]  INFO -- default-centos-73: |.. . O . +       |
+I, [2017-07-23T15:41:45.063035 #4458]  INFO -- default-centos-73: |. = o B o        |
+I, [2017-07-23T15:41:45.063055 #4458]  INFO -- default-centos-73: | oo= . +         |
+I, [2017-07-23T15:41:45.063072 #4458]  INFO -- default-centos-73: |o=++E            |
+I, [2017-07-23T15:41:45.063091 #4458]  INFO -- default-centos-73: +-----------------+
+I, [2017-07-23T15:41:45.738496 #4458]  INFO -- default-centos-73:  ---> bba4e26ca1f6
+I, [2017-07-23T15:41:45.879643 #4458]  INFO -- default-centos-73: Removing intermediate container 123020a4ba4c
+I, [2017-07-23T15:41:45.879772 #4458]  INFO -- default-centos-73: Step 6 : RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -N ''
+I, [2017-07-23T15:41:45.987678 #4458]  INFO -- default-centos-73:  ---> Running in 265296548e37
+I, [2017-07-23T15:41:46.396731 #4458]  INFO -- default-centos-73: Generating public/private dsa key pair.
+I, [2017-07-23T15:41:46.396817 #4458]  INFO -- default-centos-73: Your identification has been saved in /etc/ssh/ssh_host_dsa_key.
+I, [2017-07-23T15:41:46.396850 #4458]  INFO -- default-centos-73: Your public key has been saved in /etc/ssh/ssh_host_dsa_key.pub.
+I, [2017-07-23T15:41:46.396874 #4458]  INFO -- default-centos-73: The key fingerprint is:
+I, [2017-07-23T15:41:46.396895 #4458]  INFO -- default-centos-73: 93:d3:a1:7c:9d:1b:3b:d2:50:f9:2c:ad:9e:20:db:2f root@d1e7c521d3a4
+I, [2017-07-23T15:41:46.396913 #4458]  INFO -- default-centos-73: The key's randomart image is:
+I, [2017-07-23T15:41:46.396930 #4458]  INFO -- default-centos-73: +--[ DSA 1024]----+
+I, [2017-07-23T15:41:46.396947 #4458]  INFO -- default-centos-73: |                 |
+I, [2017-07-23T15:41:46.396962 #4458]  INFO -- default-centos-73: |             .   |
+I, [2017-07-23T15:41:46.396975 #4458]  INFO -- default-centos-73: |          . o    |
+I, [2017-07-23T15:41:46.396988 #4458]  INFO -- default-centos-73: |       . + + =   |
+I, [2017-07-23T15:41:46.398884 #4458]  INFO -- default-centos-73: |        S + = +  |
+I, [2017-07-23T15:41:46.398926 #4458]  INFO -- default-centos-73: |         + o *   |
+I, [2017-07-23T15:41:46.398944 #4458]  INFO -- default-centos-73: |        . o *    |
+I, [2017-07-23T15:41:46.398960 #4458]  INFO -- default-centos-73: |         +E+ o   |
+I, [2017-07-23T15:41:46.398976 #4458]  INFO -- default-centos-73: |        . .o+    |
+I, [2017-07-23T15:41:46.398993 #4458]  INFO -- default-centos-73: +-----------------+
+I, [2017-07-23T15:41:47.062656 #4458]  INFO -- default-centos-73:  ---> 15a54f215b46
+I, [2017-07-23T15:41:47.202148 #4458]  INFO -- default-centos-73: Removing intermediate container 265296548e37
+I, [2017-07-23T15:41:47.202223 #4458]  INFO -- default-centos-73: Step 7 : RUN if ! getent passwd kitchen; then                 useradd -d /home/kitchen -m -s /bin/bash -p '*' kitchen;               fi
+I, [2017-07-23T15:41:47.314206 #4458]  INFO -- default-centos-73:  ---> Running in b42f537c8663
+I, [2017-07-23T15:41:48.205786 #4458]  INFO -- default-centos-73:  ---> 64e51e44e36a
+I, [2017-07-23T15:41:48.353254 #4458]  INFO -- default-centos-73: Removing intermediate container b42f537c8663
+I, [2017-07-23T15:41:48.353317 #4458]  INFO -- default-centos-73: Step 8 : RUN echo "kitchen ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+I, [2017-07-23T15:41:48.462364 #4458]  INFO -- default-centos-73:  ---> Running in 0c48bbb43ca5
+I, [2017-07-23T15:41:49.541353 #4458]  INFO -- default-centos-73:  ---> aa38e3229506
+I, [2017-07-23T15:41:49.685217 #4458]  INFO -- default-centos-73: Removing intermediate container 0c48bbb43ca5
+I, [2017-07-23T15:41:49.685282 #4458]  INFO -- default-centos-73: Step 9 : RUN echo "Defaults !requiretty" >> /etc/sudoers
+I, [2017-07-23T15:41:49.796197 #4458]  INFO -- default-centos-73:  ---> Running in 8f3e44238296
+I, [2017-07-23T15:41:50.755398 #4458]  INFO -- default-centos-73:  ---> 65b7ac90bf34
+I, [2017-07-23T15:41:50.905034 #4458]  INFO -- default-centos-73: Removing intermediate container 8f3e44238296
+I, [2017-07-23T15:41:50.905100 #4458]  INFO -- default-centos-73: Step 10 : RUN mkdir -p /home/kitchen/.ssh
+I, [2017-07-23T15:41:51.014222 #4458]  INFO -- default-centos-73:  ---> Running in b8c931523857
+I, [2017-07-23T15:41:51.876924 #4458]  INFO -- default-centos-73:  ---> ab2be1651620
+I, [2017-07-23T15:41:52.015914 #4458]  INFO -- default-centos-73: Removing intermediate container b8c931523857
+I, [2017-07-23T15:41:52.015987 #4458]  INFO -- default-centos-73: Step 11 : RUN chown -R kitchen /home/kitchen/.ssh
+I, [2017-07-23T15:41:52.127625 #4458]  INFO -- default-centos-73:  ---> Running in 3b5a68955148
+I, [2017-07-23T15:41:52.980047 #4458]  INFO -- default-centos-73:  ---> 42dd50fcae5e
+I, [2017-07-23T15:41:53.125914 #4458]  INFO -- default-centos-73: Removing intermediate container 3b5a68955148
+I, [2017-07-23T15:41:53.126132 #4458]  INFO -- default-centos-73: Step 12 : RUN chmod 0700 /home/kitchen/.ssh
+I, [2017-07-23T15:41:53.239682 #4458]  INFO -- default-centos-73:  ---> Running in e88f36bd6b2d
+I, [2017-07-23T15:41:54.096535 #4458]  INFO -- default-centos-73:  ---> adef38350383
+I, [2017-07-23T15:41:54.234510 #4458]  INFO -- default-centos-73: Removing intermediate container e88f36bd6b2d
+I, [2017-07-23T15:41:54.234580 #4458]  INFO -- default-centos-73: Step 13 : RUN touch /home/kitchen/.ssh/authorized_keys
+I, [2017-07-23T15:41:54.341161 #4458]  INFO -- default-centos-73:  ---> Running in c9629dac5108
+I, [2017-07-23T15:41:55.614578 #4458]  INFO -- default-centos-73:  ---> 530fd766d20e
+I, [2017-07-23T15:41:55.876813 #4458]  INFO -- default-centos-73: Removing intermediate container c9629dac5108
+I, [2017-07-23T15:41:55.876876 #4458]  INFO -- default-centos-73: Step 14 : RUN chown kitchen /home/kitchen/.ssh/authorized_keys
+I, [2017-07-23T15:41:55.988267 #4458]  INFO -- default-centos-73:  ---> Running in 22b4221f1225
+I, [2017-07-23T15:41:57.010886 #4458]  INFO -- default-centos-73:  ---> 4860968ae01f
+I, [2017-07-23T15:41:57.152841 #4458]  INFO -- default-centos-73: Removing intermediate container 22b4221f1225
+I, [2017-07-23T15:41:57.153011 #4458]  INFO -- default-centos-73: Step 15 : RUN chmod 0600 /home/kitchen/.ssh/authorized_keys
+I, [2017-07-23T15:41:57.270127 #4458]  INFO -- default-centos-73:  ---> Running in e0974733e165
+I, [2017-07-23T15:41:58.260377 #4458]  INFO -- default-centos-73:  ---> 111636c5fe34
+I, [2017-07-23T15:41:58.392886 #4458]  INFO -- default-centos-73: Removing intermediate container e0974733e165
+I, [2017-07-23T15:41:58.392974 #4458]  INFO -- default-centos-73: Step 16 : RUN echo ssh-rsa\ AAAAB3NzaC1yc2EAAAADAQABAAABAQDkXoQGVijdh89Z7YOQMoC5qf6LviB4K38ukHyMA49gA8QsqmbXMsvu7rmPix9n0LRnNn8vZtzi766jqkIMDpGDu126wzQx9/MirfKvDFLm4W0flsi/w1kbfW8a5KW5\+110K7d4nUJqhYA91Dg/rtPqAcAs8K7cPJRjV3Ktog6pUrLdyVJgJjJxfEf95EQRGxrWHjlbMIQjQkhqO7IBLp96f7vKeJ3WMkSHw4nA7FYPoeL1ujcLsO3k/DhxIv\+mEsoXHIKLKRNSTTjVT7jCCaXQ6imQCobJMCnD1ts/uHlR\+sstCspoPXStKe\+WnNseJeONNu6aiP4Ri9mx1AQAeyvN\ kitchen_docker_key >> /home/kitchen/.ssh/authorized_keys
+I, [2017-07-23T15:41:58.500883 #4458]  INFO -- default-centos-73:  ---> Running in 1987ec5b631a
+I, [2017-07-23T15:41:59.444891 #4458]  INFO -- default-centos-73:  ---> 70d7044b7988
+I, [2017-07-23T15:41:59.601736 #4458]  INFO -- default-centos-73: Removing intermediate container 1987ec5b631a
+I, [2017-07-23T15:41:59.601808 #4458]  INFO -- default-centos-73: Successfully built 70d7044b7988
+I, [2017-07-23T15:41:59.807214 #4458]  INFO -- default-centos-73: c62b7db4fcdace586f21bf48ab8ffc180bef69ad3700fa2ac0d773e444a43269
+I, [2017-07-23T15:42:00.153866 #4458]  INFO -- default-centos-73: 0.0.0.0:32769
+I, [2017-07-23T15:42:00.998798 #4458]  INFO -- default-centos-73: [SSH] Established
+I, [2017-07-23T15:42:01.000197 #4458]  INFO -- default-centos-73: Finished creating <default-centos-73> (3m41.13s).
+I, [2017-07-23T15:42:01.000313 #4458]  INFO -- default-centos-73: -----> Converging <default-centos-73>...
+I, [2017-07-23T15:42:01.002344 #4458]  INFO -- default-centos-73: Preparing files for transfer
+I, [2017-07-23T15:42:01.002733 #4458]  INFO -- default-centos-73: Preparing dna.json
+I, [2017-07-23T15:42:01.003306 #4458]  INFO -- default-centos-73: Resolving cookbook dependencies with Berkshelf 6.2.0...
+I, [2017-07-23T15:42:25.677388 #4458]  INFO -- default-centos-73: Removing non-cookbook files before transfer
+I, [2017-07-23T15:42:25.679419 #4458]  INFO -- default-centos-73: Preparing validation.pem
+I, [2017-07-23T15:42:25.681126 #4458]  INFO -- default-centos-73: Preparing client.rb
+I, [2017-07-23T15:42:25.711486 #4458]  INFO -- default-centos-73: -----> Installing Chef Omnibus (install only if missing)
+I, [2017-07-23T15:42:25.716949 #4458]  INFO -- default-centos-73: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2017-07-23T15:42:25.718971 #4458]  INFO -- default-centos-73: Trying curl...
+I, [2017-07-23T15:42:31.728813 #4458]  INFO -- default-centos-73: Download complete.
+I, [2017-07-23T15:42:31.749114 #4458]  INFO -- default-centos-73: el 7 x86_64
+I, [2017-07-23T15:42:31.749229 #4458]  INFO -- default-centos-73: Getting information for chef stable  for el...
+I, [2017-07-23T15:42:31.749283 #4458]  INFO -- default-centos-73: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=el&pv=7&m=x86_64
+I, [2017-07-23T15:42:31.749310 #4458]  INFO -- default-centos-73:   to file /tmp/install.sh.41/metadata.txt
+I, [2017-07-23T15:42:31.749334 #4458]  INFO -- default-centos-73: trying curl...
+I, [2017-07-23T15:42:33.102386 #4458]  INFO -- default-centos-73: sha1	2298c6b99770f6ed59e326975e83d0b534797768
+I, [2017-07-23T15:42:33.102507 #4458]  INFO -- default-centos-73: sha256	6bc82b7e868b858a4710f208bf92407bbc56a4273ca78e3dfabc92ed9514b53f
+I, [2017-07-23T15:42:33.102544 #4458]  INFO -- default-centos-73: url	https://packages.chef.io/files/stable/chef/13.2.20/el/7/chef-13.2.20-1.el7.x86_64.rpm
+I, [2017-07-23T15:42:33.102567 #4458]  INFO -- default-centos-73: version	13.2.20
+I, [2017-07-23T15:42:33.103942 #4458]  INFO -- default-centos-73: downloaded metadata file looks valid...
+I, [2017-07-23T15:42:33.122261 #4458]  INFO -- default-centos-73: downloading https://packages.chef.io/files/stable/chef/13.2.20/el/7/chef-13.2.20-1.el7.x86_64.rpm
+I, [2017-07-23T15:42:33.122552 #4458]  INFO -- default-centos-73:   to file /tmp/install.sh.41/chef-13.2.20-1.el7.x86_64.rpm
+I, [2017-07-23T15:42:33.122720 #4458]  INFO -- default-centos-73: trying curl...
+I, [2017-07-23T15:43:22.456143 #4458]  INFO -- default-centos-73: Comparing checksum with sha256sum...
+I, [2017-07-23T15:43:22.651858 #4458]  INFO -- default-centos-73: 
+I, [2017-07-23T15:43:22.651982 #4458]  INFO -- default-centos-73: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2017-07-23T15:43:22.652046 #4458]  INFO -- default-centos-73: 
+I, [2017-07-23T15:43:22.652078 #4458]  INFO -- default-centos-73: You are installing an omnibus package without a version pin.  If you are installing
+I, [2017-07-23T15:43:22.652098 #4458]  INFO -- default-centos-73: on production servers via an automated process this is DANGEROUS and you will
+I, [2017-07-23T15:43:22.652115 #4458]  INFO -- default-centos-73: be upgraded without warning on new releases, even to new major releases.
+I, [2017-07-23T15:43:22.652132 #4458]  INFO -- default-centos-73: Letting the version float is only appropriate in desktop, test, development or
+I, [2017-07-23T15:43:22.652146 #4458]  INFO -- default-centos-73: CI/CD environments.
+I, [2017-07-23T15:43:22.652161 #4458]  INFO -- default-centos-73: 
+I, [2017-07-23T15:43:22.652175 #4458]  INFO -- default-centos-73: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2017-07-23T15:43:22.652189 #4458]  INFO -- default-centos-73: 
+I, [2017-07-23T15:43:22.652202 #4458]  INFO -- default-centos-73: Installing chef 
+I, [2017-07-23T15:43:22.652214 #4458]  INFO -- default-centos-73: installing with rpm...
+I, [2017-07-23T15:43:22.698787 #4458]  INFO -- default-centos-73: warning: /tmp/install.sh.41/chef-13.2.20-1.el7.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+I, [2017-07-23T15:43:22.838065 #4458]  INFO -- default-centos-73: Preparing...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2017-07-23T15:43:22.838357 #4458]  INFO -- default-centos-73: Updating / installing...
+I, [2017-07-23T15:43:28.476757 #4458]  INFO -- default-centos-73:    1:chef-13.2.20-1.el7                                                 (  2%)#                                 (  4%)##                                (  7%)###                               ( 10%)####                              ( 13%)#####                             ( 16%)######                            ( 19%)#######                           ( 22%)########                          ( 25%)#########                         ( 28%)##########                        ( 31%)###########                       ( 34%)############                      ( 37%)#############                     ( 40%)##############                    ( 43%)###############                   ( 46%)################                  ( 49%)#################                 ( 52%)##################                ( 54%)###################               ( 57%)####################              ( 60%)#####################             ( 63%)######################            ( 66%)#######################           ( 69%)########################          ( 72%)#########################         ( 75%)##########################        ( 78%)###########################       ( 81%)############################      ( 84%)#############################     ( 87%)##############################    ( 90%)###############################   ( 93%)################################  ( 96%)################################# ( 99%)################################# [100%]
+I, [2017-07-23T15:43:29.302502 #4458]  INFO -- default-centos-73: Thank you for installing Chef!
+I, [2017-07-23T15:43:29.375273 #4458]  INFO -- default-centos-73: Transferring files to <default-centos-73>
+I, [2017-07-23T15:43:31.033717 #4458]  INFO -- default-centos-73: Starting Chef Client, version 13.2.20
+I, [2017-07-23T15:43:31.354018 #4458]  INFO -- default-centos-73: [2017-07-23T19:43:31+00:00] WARN: Plugin Network: unable to detect ipaddress
+I, [2017-07-23T15:43:31.354111 #4458]  INFO -- default-centos-73: [2017-07-23T19:43:31+00:00] WARN: Plugin Network: unable to detect ipaddress
+I, [2017-07-23T15:43:41.941109 #4458]  INFO -- default-centos-73: Creating a new client identity for default-centos-73 using the validator key.
+I, [2017-07-23T15:43:42.042740 #4458]  INFO -- default-centos-73: resolving cookbooks for run list: ["mycookbook::default"]
+I, [2017-07-23T15:43:42.062144 #4458]  INFO -- default-centos-73: Synchronizing Cookbooks:
+I, [2017-07-23T15:43:42.062228 #4458]  INFO -- default-centos-73:   - mycookbook (0.1.0)
+I, [2017-07-23T15:43:42.084174 #4458]  INFO -- default-centos-73: Installing Cookbook Gems:
+I, [2017-07-23T15:43:42.084356 #4458]  INFO -- default-centos-73: Compiling Cookbooks...
+I, [2017-07-23T15:43:42.084428 #4458]  INFO -- default-centos-73: Converging 0 resources
+I, [2017-07-23T15:43:42.155149 #4458]  INFO -- default-centos-73: 
+I, [2017-07-23T15:43:42.155420 #4458]  INFO -- default-centos-73: Running handlers:
+I, [2017-07-23T15:43:42.155661 #4458]  INFO -- default-centos-73: Running handlers complete
+I, [2017-07-23T15:43:42.155770 #4458]  INFO -- default-centos-73: Chef Client finished, 0/0 resources updated in 11 seconds
+I, [2017-07-23T15:43:42.214146 #4458]  INFO -- default-centos-73: Finished converging <default-centos-73> (1m41.21s).
