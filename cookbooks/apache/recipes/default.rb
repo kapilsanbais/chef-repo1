@@ -5,13 +5,13 @@
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
 
-if  node['platform_family'] == "rhel"
-	
-	packagename = "httpd"
-
-elsif node['platform_family'] == "debian"
-	packagename = "apache2"
-end
+#if  node['platform_family'] == "rhel"
+#	
+#	packagename = "httpd"
+#
+#elsif node['platform_family'] == "debian"
+#	packagename = "apache2"
+#end
 
 
 package 'apache' do 
